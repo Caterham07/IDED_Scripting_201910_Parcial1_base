@@ -1,20 +1,27 @@
-﻿namespace Scripting_201910_Parcial1_base.Logic
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Scripting_201910_Parcial1_base.Logic
 {
     public abstract class Vehicle
     {
-        protected float baseMaxSpeed;
+        private float baseMaxSpeed = 50f;
 
-        protected int Level { get; set; }
+        private int Level { get; set; }
+        public VehicleType Car { get => Car; set => Get = value; }
 
-        protected abstract VehicleType Type { get; }
+        private abstract VehicleType Get { ; }
 
-        protected Part CurrentPart { get; set; }
+        public Part CurrentPart { get; set; }
 
         public float MaxSpeed
         {
             get
             {
-                return 0F;
+                return speedBonus;
             }
         }
 
@@ -35,6 +42,7 @@
 
             if (Type == part.Type || part.Type == VehicleType.Any)
             {
+                return ("part equipped");
             }
 
             return result;

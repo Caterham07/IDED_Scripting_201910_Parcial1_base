@@ -1,4 +1,10 @@
-﻿namespace Scripting_201910_Parcial1_base.Logic
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Scripting_201910_Parcial1_base.Logic
 {
     public abstract class Part
     {
@@ -23,6 +29,7 @@
 
         public void Upgrade()
         {
+
         }
     }
 }
